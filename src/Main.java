@@ -7,7 +7,6 @@ public class Main {
         task2();
         task3();
     }
-
     public static void task1() {
         System.out.println("Задача 1");
         int year = 2023;
@@ -18,7 +17,6 @@ public class Main {
             System.out.println(year + " год не является високосным");
         }
     }
-
     public static boolean checkYearLeap(int y) {
         boolean isYearLeap = y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
         return isYearLeap;
@@ -30,7 +28,6 @@ public class Main {
         int clientDeviceYear = 2022;
         suggestDownload(clientOS, clientDeviceYear);
     }
-
     public static void suggestDownload(int os, int year) {
         int currentYear = LocalDate.now().getYear();
         if (os == 0) {
@@ -45,7 +42,6 @@ public class Main {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
     }
-
     public static int determineDeliveryTime(int distance) {
         int days;
         if (distance > 0 && distance <= 20) {
@@ -59,7 +55,6 @@ public class Main {
         }
         return days;
     }
-
     public static void task3() {
         System.out.println("Задача 3");
         int deliveryDistance = 95;
