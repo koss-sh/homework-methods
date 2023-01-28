@@ -20,8 +20,7 @@ public class Main {
     }
 
     public static boolean checkYearLeap(int y) {
-        boolean isYearLeap = y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
-        return isYearLeap;
+        return y % 4 == 0 && y % 100 != 0 || y % 400 == 0;
     }
 
     public static void task2() {
@@ -45,24 +44,22 @@ public class Main {
     }
 
     public static int determineDeliveryTime(int distance) {
-        int days;
         if (distance > 0 && distance <= 20) {
-            days = 1;
+            return 1;
         } else if (distance > 20 && distance <= 60) {
-            days = 2;
+            return 2;
         } else if (distance > 60 && distance <= 100) {
-            days = 3;
+            return 3;
         } else {
-            days = 0;
+            return -1;
         }
-        return days;
     }
 
     public static void task3() {
         System.out.println("Задача 3");
         int deliveryDistance = -5;
         int deliveryTime = determineDeliveryTime(deliveryDistance);
-        if (deliveryTime == 0) {
+        if (deliveryTime == -1) {
             System.out.println("Доставки нет");
         } else {
             System.out.println("Потребуется дней: " + deliveryTime);
